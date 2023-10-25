@@ -10,4 +10,5 @@ import java.util.List;
 public interface CategoryRepository extends CrudRepository<Category, Integer> {
     @Override
     List<Category> findAll();
+
 }
