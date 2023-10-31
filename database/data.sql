@@ -40,3 +40,6 @@ VALUES ("Slider1","https://nguyenninh-my.sharepoint.com/personal/admin_nguyennin
        ("Slider7","https://nguyenninh-my.sharepoint.com/personal/admin_nguyenninh_onmicrosoft_com/Documents/shopee/image/banner/slide/slider7.jpg",TRUE),
        ("Slider8","https://nguyenninh-my.sharepoint.com/personal/admin_nguyenninh_onmicrosoft_com/Documents/shopee/image/banner/slide/slider8.jpg",TRUE),
        ("Slider9","https://nguyenninh-my.sharepoint.com/personal/admin_nguyenninh_onmicrosoft_com/Documents/shopee/image/banner/slide/slider9.jpg",TRUE);
+
+INSERT INTO product_data(image, name, price, selled,image_options, discount_top, discount_bottom, is_empty)
+VALUES ("https://nguyenninh-my.sharepoint.com/personal/admin_nguyenninh_onmicrosoft_com/Documents/shopee/image/products/sac_aukey.jpg","Sạc Aukey chính hãng giá rẻ",300000,0,"https://nguyenninh-my.sharepoint.com/personal/admin_nguyenninh_onmicrosoft_com/Documents/shopee/image/products/mall.png",30,10,TRUE);

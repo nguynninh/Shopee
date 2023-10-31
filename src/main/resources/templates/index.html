@@ -190,7 +190,7 @@
                                 </div>
 
                                 <div class="login-form__controls margin-10">
-                                    <button id="valid-btn" class="btn">ĐĂNG NHẬP</button>
+                                    <button id="valid-btn-regist" class="btn">ĐĂNG NHẬP</button>
                                 </div>
 
                                 <div class="login-form-another-link">
@@ -372,6 +372,54 @@
         </div>
     </div>
 </div>
+
+<!-- 25/10 -->
+<div class="product" style="height: 2400px; background-color: #f5f5f5; padding-top: 20px;">
+    <div class="grid">
+        <div class="product__table">
+            <ul class="product__table--header">
+                <li class="product__header-tab">
+                    <div class="product__header-content">
+                        <span>GỢI Ý HÔM NAY</span>
+                    </div>
+                </li>
+                <div style="width: 100%; background-color: #ee4d2d; height: 3px; transform: translateY(17px);"></div>
+            </ul>
+
+            <div class="product__category">
+                <div class="product-items" th:each="product : ${products}">
+                    <div class="product-items__header">
+                        <img th:src="@{${product.image}}" alt="" class="product-img">
+                        <div class="relative-band--left">
+                            <img th:src="@{${product.imageOptions}}" alt=""
+                                 style="height: 20px; width: 30px; margin-top: 10px;transform: translateX(-10%) ;">
+                        </div>
+                        <div class="relative-band--right">
+                                <span
+                                        style="text-align: center; color: red; font-weight: 400; font-size: 1.2rem;" th:text="${product.discountPercentTop}"></span>
+                        </div>
+                    </div>
+                    <div class="product-item--information">
+                        <div class="product-item-name">
+                            <p class="item-name-text" th:text="${product.name}">
+                        </div>
+                        <div class="product-item-discount">
+                            <div class="discount-percent discount-information"
+                                 th:text="${product.discountPercentBottom}">
+                            </div>
+                        </div>
+                        <div class="produc-item-price">
+                            <span class="price" style="font-size: 1.6rem; color: #ee4d2d;"
+                                  th:text="${product.price}"></span>
+                            <span class="selled" th:text="${product.selled}"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end 25/10 -->
 
 <footer class="footer">
 

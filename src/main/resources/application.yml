@@ -19,3 +19,9 @@ spring:
 
   main:
     web-application-type: servlet
+
+cloudinary:
+  cloud_name: ddox3txnn
+  api_key: 936211427141954
+  api_secret: M2E3ToUPqPI38UNuqtkHntKpN9g
+  secure: true
