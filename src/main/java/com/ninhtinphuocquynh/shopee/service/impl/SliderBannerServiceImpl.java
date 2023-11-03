@@ -31,8 +31,7 @@ public class SliderBannerServiceImpl implements SliderBannerService {
                         new SliderBannerDTO(
                                 s.getId(),
                                 s.getName(),
-                                s.getImage(),
-                                s.isEmpty()
+                                s.getImage()
                         )
                 );
         }
