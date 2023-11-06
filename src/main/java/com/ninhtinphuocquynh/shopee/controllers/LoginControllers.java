@@ -13,9 +13,9 @@ import java.util.Map;
 public class LoginControllers {
     @GetMapping("/signin_google")
     public Map<String, Object> loginGoogle(OAuth2AuthenticationToken authenticationToken) {
-        if (authenticationToken != null) {
+        if (authenticationToken != null)
             return authenticationToken.getPrincipal().getAttributes();
-        } else {
+        else {
             Map<String, Object> errorResponse = new HashMap<>();
             errorResponse.put("error", "Authentication token is null");
             return errorResponse;
