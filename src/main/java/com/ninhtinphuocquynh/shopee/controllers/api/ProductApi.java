@@ -18,4 +18,9 @@ public class ProductApi {
     public List<Product> findAll() {
         return service.findAll();
     }
+
+    @GetMapping("/api/v1/product/entity1")
+    public Product findEntity1() {
+        return service.findAll().get(0);
+    }
 }

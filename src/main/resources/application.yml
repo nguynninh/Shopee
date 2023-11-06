@@ -8,6 +8,14 @@ spring:
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 583101302246-h3cpn6nd9kqv0qu2rm7p2d3ith2o5h0j.apps.googleusercontent.com
+            client-secret: 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
+
   jpa:
     show-sql=true:
     properties:
@@ -20,8 +28,8 @@ spring:
   main:
     web-application-type: servlet
 
-cloudinary:
-  cloud_name: ddox3txnn
-  api_key: 936211427141954
-  api_secret: M2E3ToUPqPI38UNuqtkHntKpN9g
-  secure: true
+#cloudinary:
+#  cloud_name: ddox3txnn
+#  api_key: 936211427141954
+#  api_secret: M2E3ToUPqPI38UNuqtkHntKpN9g
+#  secure: true
