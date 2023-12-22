@@ -6,10 +6,9 @@ import com.ninhtinphuocquynh.shopee.model.Category;
 import com.ninhtinphuocquynh.shopee.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -24,7 +23,7 @@ public class CategoryApi {
     private CategoryService service;
 
     @GetMapping("/all")
-    public String findAll() throws JsonProcessingException {
+    public ResponseEntity<String> findAll() throws JsonProcessingException {
         List<Category> categories = service.findAll();
 
         Map<String, Object> customResponse = new HashMap<>();
@@ -34,6 +33,14 @@ public class CategoryApi {
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonResponse = objectMapper.writeValueAsString(customResponse);
 
-        return jsonResponse;
+        return ResponseEntity.ok(jsonResponse);
+    }
+
+    @PostMapping("/entity")
+    public ResponseEntity<String> addCategory(@RequestBody Category category){
+        if(service.add(category)){
+            return ResponseEntity.ok("Thanh cong");
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
     }
 }

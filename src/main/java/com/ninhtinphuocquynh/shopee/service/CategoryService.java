@@ -8,4 +8,5 @@ import java.util.List;
 @Service
 public interface CategoryService {
     List<Category> findAll();
+    boolean add(Category category);
 }

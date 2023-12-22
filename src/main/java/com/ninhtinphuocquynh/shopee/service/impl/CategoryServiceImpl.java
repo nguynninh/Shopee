@@ -18,4 +18,12 @@ public class CategoryServiceImpl implements CategoryService {
     public @ResponseBody List<Category> findAll() {
         return repository.findAll();
     }
+
+    @Override
+    public boolean add(Category category) {
+        if (repository.findByName(category.getName()) == null) {
+            repository.save(category);
+            return true;
+        } else return false;
+    }
 }
