@@ -22,15 +22,15 @@ import java.util.List;
 public class HomeControllers {
     @Autowired
     private SliderBannerService sliderBannerService;
-    private final String folderSliderBanner = "https://nguyenninh-my.sharepoint.com/personal/admin_nguyenninh_onmicrosoft_com/Documents/shopee/image/banner/slide/";
+    private final String folderSliderBanner = "/imageCL/banner/slide/";
 
     @Autowired
     private CategoryService categoryService;
-    private final String folderCategory = "https://nguyenninh-my.sharepoint.com/personal/admin_nguyenninh_onmicrosoft_com/Documents/shopee/image/category/";
+    private final String folderCategory = "/imageCL/category/";
 
     @Autowired
     private ProductService productService;
-    private final String folderProduct = "https://nguyenninh-my.sharepoint.com/personal/admin_nguyenninh_onmicrosoft_com/Documents/shopee/image/products/";
+    private final String folderProduct = "/imageCL/products/";
 
     @GetMapping("/home")
     public ModelAndView home(Model model) {
